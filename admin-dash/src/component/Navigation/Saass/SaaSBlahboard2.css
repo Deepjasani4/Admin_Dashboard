@@ -1,0 +1,240 @@
+/* Layout containers styling */
+.saas-dashboard-p2 {
+  background-color: #f6f8fb;
+  /* padding: 0 30px 30px 30px; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1e293b;
+  box-sizing: border-box;
+  padding-top:24px;
+}
+
+.saas-dashboard-p2 * {
+  box-sizing: border-box;
+}
+
+/* Three widgets row distribution split */
+.widgets-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.3fr 1.1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.widget-card {
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  /* border-radius: 6px; */
+  padding: 24px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 20px 0;
+}
+
+/* Funnel Segment styles */
+.funnel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.funnel-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.funnel-meta .count {
+  color: #1e293b;
+}
+
+.funnel-meta .pct {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.funnel-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.funnel-bar {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.bar-gray { background-color: #cbd5e1; }
+.bar-blue { background-color: #3b82f6; }
+.bar-orange { background-color: #f59e0b; }
+.bar-green { background-color: #10b981; }
+
+/* Growth Chart Layout wrap */
+.growth-chart-container {
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Metrics List Side Menu Widget */
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed #f1f5f9;
+}
+
+.metric-item:last-child {
+  border-bottom: none;
+}
+
+.metric-label {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.metric-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trend.positive {
+  font-size: 11px;
+  color: #10b981;
+  background-color: #ecfdf5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Data Table Grid Components */
+.transactions-card {
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  /* border-radius: 6px; */
+  padding: 24px;
+}
+
+.table-title {
+  margin-bottom: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.transactions-table th {
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.transactions-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.transactions-table tr:last-child td {
+  border-bottom: none;
+}
+
+.customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-info .name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.customer-info .email {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.text-muted {
+  color: #64748b;
+}
+
+/* Color Labels badges for transaction states */
+.status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.badge-active { background-color: #e6f7ed; color: #10b981; }
+.badge-trial { background-color: #eff6ff; color: #3b82f6; }
+.badge-churned { background-color: #fef2f2; color: #ef4444; }
+
+.impact-cell {
+  font-weight: 600;
+}
+
+.positive-text { color: #10b981; }
+.negative-text { color: #ef4444; }
+
+/* Responsive adjustments for mid-sized / smaller screens */
+@media (max-width: 1100px) {
+  .widgets-row {
+    grid-template-columns: 1fr;
+  }
+  .widget-card {
+    height: auto;
+  }
+}

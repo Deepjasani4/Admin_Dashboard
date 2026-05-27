@@ -6,7 +6,7 @@
   width: 100%;
   font-family: system-ui, -apple-system, sans-serif;
   background-color: #f8fafc;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .finance-page-header {
@@ -59,7 +59,7 @@
    ========================================================================== */
 .credit-card-widget {
   background-color: #1e2530; /* Matte Dark Obsidian Blue Hex */
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 24px;
   color: #ffffff;
   display: flex;
@@ -149,7 +149,7 @@
    ========================================================================== */
 .transactions-list-card {
   background-color: #ffffff;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   border: 1px solid #e2e8f0;
   padding: 24px;
   box-sizing: border-box;
@@ -175,7 +175,7 @@
   border: none;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,7 +251,7 @@
 .metric-mini-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -298,7 +298,7 @@
 .cashflow-main-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 24px;
   box-sizing: border-box;
   display: flex;

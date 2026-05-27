@@ -10,6 +10,9 @@ import Ecommerce from "./pages/Ecommerce.jsx";
 import Finance from "./pages/Finance.jsx";
 import Crypto from "./pages/Crypto.jsx";
 import Project from "./pages/Project.jsx";
+import SaaS from "./pages/Saas.jsx";
+import HR from "./pages/Hr.jsx";
+import Marketing from "./pages/Marketing.jsx";
 
 const App = () => {
   const [collapse, setCollapse] = useState(false);
@@ -34,14 +37,11 @@ const App = () => {
             <Route path="/ecommerce" element={<Ecommerce />} />
             <Route path="/finance" element={<Finance />} />
             <Route path="/crypto" element={<Crypto />} />
-             <Route path="/project" element={<Project />} />
-          </Routes>
-
-         
-         
-          {/* <Route path="/saas" element={<SaaS />} /> */}
-          {/* <Route path="/hr" element={<HR />} /> */}
-          {/* <Route path="/marketing" element={<Markrting />} /> */}
+            <Route path="/project" element={<Project />} />
+            <Route path="/saas" element={<SaaS />} />
+            <Route path="/hr" element={<HR />} />
+            <Route path="/marketing" element={<Marketing />} />
+          </Routes>  
         </div>
       </div>
     </div>

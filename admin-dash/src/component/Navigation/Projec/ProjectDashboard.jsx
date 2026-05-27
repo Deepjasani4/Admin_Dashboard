@@ -73,13 +73,13 @@ export default function ProjectDashboard() {
     dataLabels: {
       enabled: true,
       formatter: (val) => `${val.toFixed(1)}%`,
-      style: { fontSize: '11px', colors: ['#ffffff'], fontWeight: '700' }
+      style: { fontSize: '10px', colors: ['#ffffff'], fontWeight: '600' }
     },
     legend: { show: false }, // Handled via custom structured grid legend underneath
     plotOptions: {
       pie: {
         donut: {
-          size: '70%'
+          size: '65%'
         }
       }
     }

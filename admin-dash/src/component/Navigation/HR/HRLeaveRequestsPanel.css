@@ -1,0 +1,329 @@
+/* Container wrap parameters */
+.leave-requests-panel {
+  background-color: #f6f8fb;
+  padding-top: 24px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+.leave-requests-panel * {
+  box-sizing: border-box;
+}
+
+.requests-card-container {
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  /* border-radius: 6px; */
+  padding: 24px;
+}
+
+.panel-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 20px 0;
+}
+
+/* Toolbar Controls Section */
+.filter-toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-left-aside {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-search-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.magnifier-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 13px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.search-field-input {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px 8px 34px;
+  font-size: 13px;
+  width: 240px;
+  color: #334155;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search-field-input:focus {
+  border-color: #cbd5e1;
+}
+
+.toolbar-status-filter-btn {
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.plus-symbol {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.toolbar-columns-toggle-btn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Core Framework Table Layout rules */
+.table-viewport-wrapper {
+  overflow-x: auto;
+  border: 1px solid #f1f5f9;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.leave-records-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leave-records-table th {
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+  padding: 14px 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.sort-indicator-arrows {
+  font-size: 10px;
+  color: #cbd5e1;
+  margin-left: 4px;
+}
+
+.leave-records-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.leave-records-table tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-avatar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-badge-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-name-label {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.table-body-text-muted {
+  color: #475569;
+}
+
+/* Custom Status Pill Badges Layout styles */
+.status-pill-chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.status-state-pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+.status-state-approved {
+  background-color: #d1fae5;
+  color: #059669;
+}
+.status-state-rejected {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+/* Inline Action Buttons Configuration rules */
+.action-button-flex-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.action-circle-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.1s ease;
+}
+
+.action-circle-btn:hover {
+  opacity: 0.85;
+}
+
+.button-approve-check {
+  background-color: #e6f7ed;
+  color: #10b981;
+}
+
+.button-reject-cross {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Footer Pagination blocks distribution styles */
+.panel-pagination-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.pagination-navigation-controls {
+  display: flex;
+  align-items: center;
+}
+
+.row-selection-menu-label {
+  margin-right: 8px;
+}
+
+.dropdown-native-select-wrapper {
+  margin-right: 18px;
+}
+
+.row-count-select-menu {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #475569;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.pagination-buttons-nav-cluster {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-step-btn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #475569;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-step-btn.state-disabled {
+  color: #cbd5e1;
+  background-color: #f8fafc;
+  cursor: not-allowed;
+  border-color: #f1f5f9;
+}
+
+.num-step-btn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #475569;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.num-step-btn.active-page-index {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Fluid Responsiveness Rules */
+@media (max-width: 768px) {
+  .filter-toolbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .filter-left-aside {
+    width: 100%;
+  }
+  .search-field-input {
+    width: 100%;
+  }
+  .panel-pagination-footer {
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+}
