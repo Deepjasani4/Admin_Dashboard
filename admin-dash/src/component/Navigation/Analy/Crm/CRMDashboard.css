@@ -1,0 +1,186 @@
+/* Container Layout */
+.crm-dashboard-container {
+  background-color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.crm-header {
+  margin-bottom: 24px;
+}
+
+.crm-header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.crm-breadcrumb {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.crm-breadcrumb span {
+  color: #64748b;
+}
+
+/* Grid System */
+.crm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  /* max-width: 1280px; */
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .crm-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Base Card Styles */
+.crm-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  box-sizing: border-box;
+}
+
+.crm-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Card 1: Transactions Elements */
+.crm-card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.crm-toggle-group {
+  display: flex;
+  gap: 4px;
+  background-color: #f8fafc;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.crm-toggle-btn {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.crm-toggle-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.crm-transaction-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 8px 0 0 0;
+}
+
+.crm-subtext {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.crm-chart-wrapper {
+  height: 120px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Card 2: Rating Elements */
+.crm-rating-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.crm-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.crm-big-star {
+  width: 44px;
+  height: 44px;
+  fill: #f59e0b;
+  color: #f59e0b;
+}
+
+.crm-rating-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.03em;
+}
+
+.crm-stars-group {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.crm-star-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.crm-star-icon.filled {
+  fill: #f59e0b;
+  color: #f59e0b;
+}
+
+.crm-star-icon.empty {
+  color: #cbd5e1;
+}
+
+.crm-badge {
+  background-color: #10b981;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Card 3: News Stats Elements */
+.crm-bar-chart-wrapper {
+  height: 200px;
+  width: 100%;
+  margin-top: 16px;
+}

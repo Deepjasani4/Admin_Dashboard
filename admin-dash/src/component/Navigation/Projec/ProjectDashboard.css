@@ -1,0 +1,368 @@
+/* ==========================================================================
+   1. Global Wrapper Framework and Configuration
+   ========================================================================== */
+.project-dashboard-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f4f6fa;
+  padding: 30px;
+}
+
+/* Header Context Route Breadcrumbs styling */
+.dashboard-navigation-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-navigation-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.breadcrumb-links {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.breadcrumb-links .active-path {
+  color: #6b7280;
+}
+
+/* ==========================================================================
+   2. Flexible Asymmetric Matrix Grids Layout Setup
+   ========================================================================== */
+.dashboard-grid-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid-row.triple-column {
+    grid-template-columns: repeat(3, 1fr); /* 3 equal structured columns match */
+  }
+}
+
+.margin-top-layer {
+  margin-top: 24px;
+}
+
+/* ==========================================================================
+   3. Unified Internal Panel Container Definitions
+   ========================================================================== */
+.metrics-panel-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 1px 2px rgba(0, 0, 0, 0.03);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Anti wrap-blowout structure */
+}
+
+.panel-flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.panel-flex-header.justify-end {
+  justify-content: flex-end;
+}
+
+.panel-flex-header.border-none {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 16px;
+}
+
+.panel-mini-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.panel-mini-title-bold {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Micro Status Pill Configuration */
+.badge-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.teal-badge {
+  background-color: #e6f7f4;
+  color: #0d9488;
+}
+
+.blue-badge {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* ==========================================================================
+   4. Core Component Widgets Interior Layout Matrix
+   ========================================================================== */
+
+/* --- Card 1: Project Progress Internal Layout --- */
+.progress-metric-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.progress-metric-labels h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.fraction-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.progress-bar-fill.target-teal {
+  background-color: #06b6d4;
+}
+
+.team-count-text {
+  font-size: 0.825rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* --- Card 2: Sales Metrics Statistics Stack Layout --- */
+.time-filter-toggle {
+  display: flex;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 2px;
+  gap: 4px;
+}
+
+.time-filter-toggle span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.time-filter-toggle .active-toggle-pill {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.panel-sales-body h3 {
+  font-size: 0.875rem;
+  color: #374151;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.headline-numeric-value {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.subtext-muted-gray {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --- Card 3: Events Layout Frame --- */
+.calendar-icon-center-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 12px 0;
+}
+
+.calendar-svg-accent {
+  color: #3b82f6;
+}
+
+.competitor-headline-text {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+/* --- Card 4: Reply Analytics layout --- */
+.response-time-metric {
+  font-size: 0.825rem;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.chart-mount-canvas {
+  width: 100%;
+}
+
+/* --- Card 5: Statistics Donut Block Layout --- */
+.donut-analytics-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donut-chart-mount-canvas {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.custom-donut-grid-legend {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 16px;
+}
+
+.legend-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+}
+
+.legend-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.legend-label .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.dot.target-green { background-color: #10b981; }
+.dot.target-orange { background-color: #f59e0b; }
+.dot.target-purple { background-color: #8b5cf6; }
+.dot.target-blue { background-color: #3b82f6; }
+
+.legend-val {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* --- Card 6: Leaderboard Structure Metrics --- */
+.leaderboard-data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.leaderboard-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile-identity-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank-index-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.user-profile-fullname {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.leaderboard-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.leaderboard-metric-pill.trend-up {
+  color: #10b981;
+}
+
+.leaderboard-metric-pill.trend-down {
+  color: #ef4444;
+}
+
+/* ==========================================================================
+   5. Compact Responsive View Handheld Overrides
+   ========================================================================== */
+@media (max-width: 640px) {
+  .project-dashboard-wrapper {
+    padding: 16px;
+  }
+
+  .metrics-panel-card {
+    padding: 16px;
+  }
+}

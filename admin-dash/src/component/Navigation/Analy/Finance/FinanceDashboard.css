@@ -1,0 +1,377 @@
+/* ==========================================================================
+   1. Page General Header & Hierarchy Controls
+   ========================================================================== */
+.finance-dashboard-container {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  padding: 20px;
+}
+
+.finance-page-header {
+  margin-bottom: 24px;
+}
+
+.finance-page-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.finance-breadcrumbs {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.finance-breadcrumbs .active {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   2. Main Layout Split Grids (Responsive Framework)
+   ========================================================================== */
+.finance-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .finance-grid-layout {
+    grid-template-columns: 350px 1fr; /* Exact left static card ratio to right graph */
+  }
+}
+
+.finance-left-pane,
+.finance-right-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0; /* Anti breakout container overflow guard */
+}
+
+/* ==========================================================================
+   3. Left Pane Component: Credit Card UI
+   ========================================================================== */
+.credit-card-widget {
+  background-color: #1e2530; /* Matte Dark Obsidian Blue Hex */
+  border-radius: 8px;
+  padding: 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.card-label-type {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.card-chip-icon {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.card-number-display {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  margin-bottom: 28px;
+  color: #f8fafc;
+}
+
+.card-holder-meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-block.text-right {
+  text-align: right;
+}
+
+.meta-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meta-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.card-balance-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.balance-label {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.balance-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   4. Left Pane Component: Recent Transactions List
+   ========================================================================== */
+.transactions-list-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.transactions-header h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.add-transaction-btn {
+  background-color: #e11d48; /* Magenta pink theme icon color */
+  color: #ffffff;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.transaction-rows-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.transaction-item-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tx-profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tx-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tx-icon-circle.down { background-color: #fee2e2; color: #ef4444; }
+.tx-icon-circle.up { background-color: #dcfce7; color: #10b981; }
+
+.tx-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.tx-amount {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.tx-amount.negative { color: #ef4444; }
+.tx-amount.positive { color: #10b981; }
+
+/* ==========================================================================
+   5. Right Pane Component: Top 3 Stats Metrics Grid
+   ========================================================================== */
+.top-metrics-row-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .top-metrics-row-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.metric-mini-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.metric-meta-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.metric-meta-details h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 6px 0;
+}
+
+.growth-indicator {
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.growth-indicator.green { color: #10b981; }
+.growth-indicator.red { color: #ef4444; }
+
+.mini-sparkline-box {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. Right Pane Component: Main Cashflow Panel Box
+   ========================================================================== */
+.cashflow-main-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.cashflow-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.left-headline-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.left-headline-group h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.cashflow-badge-pill {
+  background-color: #dcfce7;
+  color: #16a34a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cashflow-timeframe-toggle {
+  display: flex;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cashflow-timeframe-toggle button {
+  background: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cashflow-timeframe-toggle button.active {
+  background-color: #e11d48; /* Exact Crimson active state color match */
+  color: #ffffff;
+}
+
+.main-bar-chart-wrapper {
+  width: 100%;
+}
+
+/* Responsive Mobile Wrap Adjustments */
+@media (max-width: 480px) {
+  .cashflow-header-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cashflow-timeframe-toggle {
+    width: 100%;
+  }
+  .cashflow-timeframe-toggle button {
+    flex: 1;
+    text-align: center;
+  }
+}

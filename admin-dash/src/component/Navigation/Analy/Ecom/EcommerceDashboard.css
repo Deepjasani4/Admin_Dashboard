@@ -1,0 +1,324 @@
+/* ==========================================================================
+   1. Header Nav & Utility Toolbar (Top Spacing Removed Flush)
+   ========================================================================== */
+.ecom-dashboard-container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.ecom-header-nav {
+  margin-bottom: 24px;
+  padding-top: 0px; /* Kept completely flush with container bounds */
+}
+
+.ecom-header-nav h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.ecom-header-nav .breadcrumbs {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.ecom-header-nav .breadcrumbs .active {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Section Header Toolbar */
+.order-progress-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.order-progress-toolbar .section-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* Reusable Micro Component: Pill Toggle Switch Buttons */
+.pill-toggle-group {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.pill-toggle-group button {
+  background: transparent;
+  border: none;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pill-toggle-group button.active {
+  background-color: #db2777; /* Crimson pink color matches image indicator toggles */
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   2. Progress Metrics Top Row Structure
+   ========================================================================== */
+.metrics-row-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .metrics-row-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 column structural layout for tablet and above */
+  }
+}
+
+.progress-metric-card {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.progress-metric-card .card-lbl {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: block;
+}
+
+.progress-metric-card .metric-ratio {
+  margin: 12px 0 14px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.progress-metric-card .bold-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.progress-metric-card .muted-max {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Custom Progress Bar Elements */
+.progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.progress-bar-fill.fill-teal { background-color: #10b981; }
+.progress-bar-fill.fill-blue { background-color: #3b82f6; }
+.progress-bar-fill.fill-pink { background-color: #f43f5e; }
+
+.progress-sub-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   3. Main Bottom Split Content Layout (Chart vs Earnings Block)
+   ========================================================================== */
+.split-visual-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 1100px) {
+  .split-visual-grid {
+    grid-template-columns: 2fr 1fr; /* Custom asymmetric layout split mirroring user mockup design layout */
+  }
+}
+
+/* Left Summary Chart Structure */
+.summary-chart-card {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.summary-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-left-meta h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 6px 0;
+}
+
+.financial-legend-metrics {
+  display: flex;
+  gap: 16px;
+  font-size: 0.825rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+}
+
+.financial-legend-metrics .txt-dark {
+  color: #1e293b;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.main-bar-chart-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Custom Float Chart Legend design */
+.chart-inline-legend {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.legend-dot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.blue-dot { background-color: #5bf; }
+.teal-dot { background-color: #2dd4bf; }
+
+/* Right Solid Earnings Hero Card Component Layouts */
+.earnings-hero-card {
+  background-color: #10b981; /* High impact solid teal brand signature color block */
+  border-radius: 6px;
+  padding: 24px;
+  color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.earnings-hero-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+}
+
+/* Horizontal Days selection ribbon strip */
+.days-horizontal-strip {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: auto;
+  gap: 4px;
+}
+
+.day-pill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.day-pill:hover {
+  opacity: 1;
+}
+
+.day-pill.active {
+  background-color: rgba(255, 255, 255, 0.25); /* Translucent highlight matching active mockup state precisely */
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Main Display numerical layer box */
+.earnings-display-value-block {
+  margin-top: 40px;
+}
+
+.earnings-val-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.earnings-val-flex h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.arrow-up-icon {
+  opacity: 0.9;
+}
+
+.day-metric-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  display: block;
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+/* ==========================================================================
+   4. Targeted Responsive System Breakpoints
+   ========================================================================== */
+@media (max-width: 480px) {
+  .summary-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .chart-inline-legend {
+    position: static;
+    margin-top: 12px;
+    justify-content: flex-start;
+  }
+  .earnings-val-flex h2 {
+    font-size: 1.9rem;
+  }
+}

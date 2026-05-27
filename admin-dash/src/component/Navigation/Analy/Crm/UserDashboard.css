@@ -1,0 +1,331 @@
+/* Container Layout - Top spacing completely removed */
+.dashboard-container {
+  background-color: #f8fafc;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding-top: 24px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  /* max-width: 1400px; */
+  margin: 0 auto; /* Changed top margin to 0 */
+}
+
+@media (min-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 440px 1fr;
+  }
+}
+
+/* Base Card Styles */
+.dash-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.card-title-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.phone-icon {
+  color: #db2777;
+  width: 18px;
+  height: 18px;
+}
+
+/* Donut Chart Visuals */
+.chart-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Filter Controls Toolbar */
+.toolbar-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  min-width: 240px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  width: 16px;
+  height: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #334155;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #334155;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+}
+
+.btn-icon-sm {
+  width: 14px;
+  height: 14px;
+  color: #64748b;
+}
+
+/* Data Table Structure */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.custom-table th {
+  background-color: #ffffff;
+  color: #475569;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.sort-icon-span {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 4px;
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  vertical-align: middle;
+}
+
+.custom-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* User Profile Matrix */
+.user-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.avatar-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.email-text {
+  color: #64748b;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.approved {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge.pending {
+  background-color: #fef9c3;
+  color: #ca8a04;
+}
+
+/* Row Operational Controls */
+.actions-cell-flex {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action-approve {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #fce7f3;
+  color: #db2777;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-action-reject {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #ffe4e6;
+  color: #e11d48;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-action-approve:hover {
+  background-color: #fbcfe8;
+}
+.btn-action-reject:hover {
+  background-color: #fecdd3;
+}
+
+/* Pagination Controls Footer */
+.pagination-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.rows-per-page-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-select {
+  padding: 6px 24px 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #334155;
+  outline: none;
+  cursor: pointer;
+}
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-page-nav {
+  padding: 6px 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #475569;
+}
+
+.btn-page-nav:disabled {
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.btn-page-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #475569;
+  font-weight: 500;
+}
+
+.btn-page-number.active {
+  background-color: #e11d48;
+  color: #ffffff;
+  border-color: #e11d48;
+}

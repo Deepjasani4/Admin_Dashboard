@@ -1,0 +1,160 @@
+/* CONTAINER GRID SETUP */
+.revenue-grid-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: auto;
+  /* margin:  auto 0 auto; */
+  padding-top: 24px;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* SHARED CARD FORMATTING */
+.revenue-card {
+  background: #ffffff;
+  /* border-radius: 12px; */
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-chart-card {
+  justify-content: space-between;
+}
+
+.chart-body {
+  width: 100%;
+  height: 340px;
+  position: relative;
+}
+
+/* HEADERS */
+.revenue-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 20px 0;
+}
+
+/* RIGHT COLUMN WRAPPER */
+.revenue-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* TOP REGIONS ITEM DESIGN */
+.regions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.region-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.region-item h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 2px 0;
+}
+
+.region-item p {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.trend-up {
+  color: #10b981;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.trend-down {
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* GOAL PROGRESS BARS STYLING */
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #374151;
+}
+
+.progress-labels strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.bar-pink {
+  background-color: #e91e63;
+}
+.bar-green {
+  background-color: #10b981;
+}
+.bar-orange {
+  background-color: #f59e0b;
+}
+
+@media (max-width: 1024px) {
+  .revenue-grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .revenue-card {
+    padding: 16px;
+  }
+
+  .chart-body {
+    height: 280px;
+  }
+
+  .revenue-header h2 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+}

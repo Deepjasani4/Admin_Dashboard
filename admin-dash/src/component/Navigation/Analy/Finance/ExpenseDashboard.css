@@ -1,0 +1,382 @@
+/* ==========================================================================
+   1. Root Context Canvas Framework Setup
+   ========================================================================== */
+.dashboard-root-layout {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ==========================================================================
+   2. Top Section Frameworks Grid (Flexible Split Breakdowns)
+   ========================================================================== */
+.top-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .top-insights-grid {
+    grid-template-columns: 2fr 1fr; /* Exact proportions balancing progress bars to pie chart */
+  }
+}
+
+.insight-card, 
+.transaction-history-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Fallback guard against structural text breakouts */
+}
+
+.insight-card h3, 
+.transaction-history-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 24px 0;
+}
+
+/* ==========================================================================
+   3. Money Flow Progress Cards Grid Blueprint
+   ========================================================================== */
+.progress-bars-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .progress-bars-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.progress-bar-item-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bar-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-name-flex-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-emoji-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.category-label-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.value-percentage-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.absolute-amount-text {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.fraction-percentage-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Native Custom Track Elements styling */
+.native-track-bg {
+  width: 100%;
+  height: 6px;
+  background-color: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.active-fill-thumb {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease-out;
+}
+
+/* ==========================================================================
+   4. Category Pie Panel Layout Box
+   ========================================================================== */
+.donut-chart-canvas-wrapper {
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   5. Interactive Transaction History Table Component
+   ========================================================================== */
+.table-utilities-actions-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.utility-left-inputs-subflex,
+.utility-right-buttons-subflex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .utility-left-inputs-subflex,
+  .utility-right-buttons-subflex {
+    width: 100%;
+  }
+}
+
+.search-input-field-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+@media (max-width: 640px) {
+  .search-input-field-wrapper {
+    min-width: 100%;
+  }
+}
+
+.embedded-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.search-input-field-wrapper input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #334155;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filter-dropdown-trigger-btn,
+.utility-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #334155;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .filter-dropdown-trigger-btn,
+  .utility-pill-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.filter-dropdown-trigger-btn.active-filter {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* ==========================================================================
+   6. Data Grid Table Layer Component
+   ========================================================================== */
+.responsive-table-scroller {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.crm-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.crm-data-table th {
+  background-color: #ffffff;
+  color: #64748b;
+  font-weight: 500;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.crm-data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.crm-data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table Typography Standardizations */
+.text-muted-slate { color: #64748b; }
+.font-medium-dark { color: #1e293b; font-weight: 500; }
+.font-semibold-amount { font-weight: 600; }
+
+.positive-green { color: #16a34a; }
+.negative-red { color: #dc2626; }
+
+/* Micro Badge Indicator Capsules */
+.type-badge-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.type-badge-pill.credit { background-color: #dcfce7; color: #15803d; }
+.type-badge-pill.debit { background-color: #fee2e2; color: #b91c1c; }
+
+.empty-table-state-cell {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px !important;
+}
+
+/* ==========================================================================
+   7. Footer Component Interface Framework
+   ========================================================================== */
+.table-pagination-footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.pagination-controls-subgroup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rows-dropdown-selector-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.native-select-element {
+  padding: 6px 20px 6px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #334155;
+  outline: none;
+  cursor: pointer;
+}
+
+.page-stepping-row-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-step-btn {
+  padding: 6px 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #475569;
+  font-size: 0.825rem;
+}
+
+.nav-step-btn:disabled {
+  color: #cbd5e1;
+  cursor: not-allowed;
+  background-color: #ffffff;
+}
+
+.numeric-indicator-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #475569;
+  font-weight: 500;
+}
+
+.numeric-indicator-btn.active-page-state {
+  background-color: #e11d48; /* Crimson / Accent Rose indicator match */
+  color: #ffffff;
+  border-color: #e11d48;
+}
+
+/* Responsive Mobile Compression Stack overrides */
+@media (max-width: 640px) {
+  .table-pagination-footer-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pagination-controls-subgroup {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

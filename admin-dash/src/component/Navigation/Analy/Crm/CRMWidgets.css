@@ -1,0 +1,377 @@
+/* ==========================================================================
+   1. Dashboard Navigation Titles (Top Margin Removed Explicitly)
+   ========================================================================== */
+.crm-dashboard-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.crm-header-nav {
+  margin-bottom: 20px;
+  padding-top: 0px; /* Kept clean to prevent extra gaps */
+}
+
+.crm-header-nav h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.crm-header-nav .breadcrumbs {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.crm-header-nav .breadcrumbs .active {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   2. Responsive Flexbox Grid Rows
+   ========================================================================== */
+.widgets-row-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .widgets-row-grid.three-columns {
+    grid-template-columns: repeat(2, 1fr); /* Tablet layout fallback grid spacing */
+  }
+}
+
+@media (min-width: 1200px) {
+  .widgets-row-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr); /* Seamless desktop view mirroring images */
+  }
+}
+
+/* ==========================================================================
+   3. Uniform CRM Functional Base Card Styling
+   ========================================================================== */
+.crm-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.crm-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.crm-card.text-center {
+  text-align: center;
+}
+
+.crm-card.flex-center-content {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.self-start-title {
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   4. Custom Inner Component Elements
+   ========================================================================== */
+
+/* Card A Component: Transactions Layout elements */
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-header-flex h3 {
+  margin: 0;
+}
+
+.timeframe-toggle {
+  display: flex;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.timeframe-toggle button {
+  background: #ffffff;
+  border: none;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.timeframe-toggle button.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.big-currency-metric {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: block;
+  letter-spacing: -0.5px;
+}
+
+.big-currency-metric.center-metric {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.sub-muted-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  display: block;
+  margin-top: 2px;
+}
+
+.sparkline-wrapper {
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* Card B Component: Ratings Display items */
+.rating-display-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.numerical-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.star-hero-icon {
+  font-size: 2.2rem;
+  color: #ea580c;
+}
+
+.numerical-rating h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.star-row-ui {
+  display: flex;
+  gap: 4px;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.filled-star { color: #ea580c; }
+.empty-star { color: #cbd5e1; }
+
+.growth-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.growth-badge-pill.green-up {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+/* Card C Component: Bar chart layout */
+.horizontal-bar-wrapper {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Card D Component: Leaderboard row configurations */
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leader-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rank-badge {
+  width: 24px;
+  height: 24px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.leader-score {
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.txt-green { color: #10b981; }
+.txt-red { color: #ef4444; }
+
+/* Card E Component: Total Leads Legend Split Grid layouts */
+.donut-center-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 20px 0;
+}
+
+.custom-grid-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 24px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.legend-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.legend-val {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-blue { background-color: #3b82f6; }
+.dot-green { background-color: #10b981; }
+.dot-red { background-color: #ef4444; }
+.dot-amber { background-color: #f59e0b; }
+
+/* Card F Component: Market Row elements */
+.market-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.market-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.market-row-item:last-child {
+  border-bottom: none;
+}
+
+.market-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+}
+
+.market-pair {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.market-price {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+.mini-market-spark {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.market-trend-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  min-width: 65px;
+  text-align: center;
+}
+
+.bg-light-green { background-color: #ecfdf5; }
+.bg-light-red { background-color: #fef2f2; }
+.text-green { color: #10b981; }
+.text-red { color: #ef4444; }
+
+/* ==========================================================================
+   5. Extra Responsive Optimization Hacks
+   ========================================================================== */
+@media (max-width: 480px) {
+  .custom-grid-legend {
+    grid-template-columns: 1fr; /* Drop legend item columns to full widths on super small screen wrappers */
+    gap: 8px;
+  }
+  .card-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
