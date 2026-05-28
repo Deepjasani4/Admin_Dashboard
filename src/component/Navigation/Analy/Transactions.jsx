@@ -159,7 +159,7 @@ const Transactions = () => {
           </span>
         </div>
 
-        <div className="activity-timeline">
+        {/* <div className="activity-timeline">
           {activityData.map((activity, index) => (
             <div className="timeline-item" key={index}>
               <div className="timeline-badge" style={{ borderColor: activity.color }}></div>
@@ -167,6 +167,19 @@ const Transactions = () => {
                 <h4>{activity.title}</h4>
                 <p>{activity.desc}</p>
                 <span className="time-text">{activity.time}</span>
+              </div>
+            </div>
+          ))}
+        </div> */}
+
+         <div className="activity-timeline">
+          {activityData.map((acty, indx) => (
+            <div className="timeline-item" key={indx}>
+              <div className="timeline-badge" style={{ borderColor: acty.color }}></div>
+              <div className="timeline-content">
+                <h4>{acty.title}</h4>
+                <p>{acty.desc}</p>
+                <span className="time-text">{acty.time}</span>
               </div>
             </div>
           ))}

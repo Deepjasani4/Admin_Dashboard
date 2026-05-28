@@ -83,11 +83,11 @@ export default function CRMWidgets() {
   return (
     <div className="crm-dashboard-wrapper">
       
-      {/* HEADER ROOT ROUTING TITLE */}
+      {/* HEADER ROOT ROUTING TITLE
       <div className="crm-header-nav">
         <h2>CRM</h2>
         <div className="breadcrumbs">Home / Dashboard / <span className="active">CRM</span></div>
-      </div>
+      </div> */}
 
       {/* ==========================================================================
          BLOCK 1: Top Widgets Row (Transactions, Ratings, News)

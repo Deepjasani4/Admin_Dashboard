@@ -112,7 +112,7 @@ export default function UserDashboard() {
           </div>
 
           {/* ApexCharts Donut Render Wrapper */}
-          <div className="chart-container" style={{ display: 'block', height: 'auto' }}>
+          <div className="chart-container" style={{ display: 'block', height: 'auto', }}>
             <Chart
               options={chartOptions}
               series={chartSeries}

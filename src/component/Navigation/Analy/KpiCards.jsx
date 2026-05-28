@@ -3,12 +3,11 @@ import Chart from "react-apexcharts";
 import "./KpiCards.css";
 
 const KpiCards = () => {
-
   // 1. Sales Performance (Blue Radial)
   const salesOptions = {
-    chart: { 
+    chart: {
       type: "radialBar",
-      redrawOnParentResize: true 
+      redrawOnParentResize: true,
     },
     plotOptions: {
       radialBar: {
@@ -31,9 +30,9 @@ const KpiCards = () => {
 
   // 2. Customer Satisfaction (Green Radial)
   const satisfactionOptions = {
-    chart: { 
+    chart: {
       type: "radialBar",
-      redrawOnParentResize: true 
+      redrawOnParentResize: true,
     },
     plotOptions: {
       radialBar: {
@@ -57,9 +56,9 @@ const KpiCards = () => {
 
   // 3. System Uptime (Orange Radial)
   const uptimeOptions = {
-    chart: { 
+    chart: {
       type: "radialBar",
-      redrawOnParentResize: true 
+      redrawOnParentResize: true,
     },
     plotOptions: {
       radialBar: {
@@ -86,7 +85,7 @@ const KpiCards = () => {
     chart: {
       type: "line",
       sparkline: { enabled: true },
-      redrawOnParentResize: true
+      redrawOnParentResize: true,
     },
     stroke: {
       curve: "smooth",
@@ -155,7 +154,7 @@ const KpiCards = () => {
             series={apiChartSeries}
             type="line"
             height={50}
-            width="100%"
+            width="90%"
           />
         </div>
         <h3>API Response Time</h3>
