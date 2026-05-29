@@ -14,10 +14,14 @@ import SaaS from "./pages/Saas.jsx";
 import HR from "./pages/Hr.jsx";
 import Marketing from "./pages/Marketing.jsx";
 
+
 const App = () => {
   const [collapse, setCollapse] = useState(false);
 
   const [mobile, setMobile] = useState(false);
+
+
+ 
 
   return (
     <div className="app">
@@ -41,7 +45,7 @@ const App = () => {
             <Route path="/saas" element={<SaaS />} />
             <Route path="/hr" element={<HR />} />
             <Route path="/marketing" element={<Marketing />} />
-          </Routes>  
+          </Routes>
         </div>
       </div>
     </div>

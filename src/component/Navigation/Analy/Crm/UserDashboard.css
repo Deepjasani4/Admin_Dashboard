@@ -27,6 +27,21 @@
   }
 }
 
+/* @media (min-width: 375px) { */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dash-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+/* } */
 /* Base Card Styles */
 .dash-card {
   background-color: #ffffff;
@@ -37,6 +52,8 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
 }
 
 .card-title-flex {
@@ -328,4 +345,142 @@
   background-color: #e11d48;
   color: #ffffff;
   border-color: #e11d48;
+}
+/* =========================
+   MOBILE RESPONSIVE FIX
+   320px - 425px
+========================= */
+
+@media (max-width: 425px) {
+  .dashboard-container {
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dash-card {
+    /* padding: 16px; */
+    width: 100%;.
+    height: 100%;
+    overflow: hidden;
+  } 
+
+  /* TITLE */
+  .card-title-flex {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .phone-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* CHART FIX */
+  .chart-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chart-container .apexcharts-canvas {
+    width: 100% !important;
+    max-width: 260px !important;
+    margin: auto;
+  }
+
+  .chart-container svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* LEGEND FIX */
+  .apexcharts-legend {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  .apexcharts-legend-series {
+    margin: 0 !important;
+  }
+
+  .apexcharts-legend-text {
+    font-size: 12px !important;
+  }
+
+  /* TOOLBAR */
+  .toolbar-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .action-buttons-group {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* TABLE */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .custom-table {
+    min-width: 700px;
+  }
+
+  /* PAGINATION */
+  .pagination-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pagination-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* BUTTONS */
+  .btn-action-approve,
+  .btn-action-reject {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  /* USER INFO */
+  .user-info-cell {
+    gap: 8px;
+  }
+
+  .avatar-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  /* SEARCH INPUT */
+  .search-input {
+    font-size: 13px;
+    padding: 8px 10px 8px 34px;
+  }
 }

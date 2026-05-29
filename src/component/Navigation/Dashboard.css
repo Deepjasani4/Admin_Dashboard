@@ -23,7 +23,7 @@ body {
   background: #24324a;
   color: white;
   padding: 20px;
-  overflow-y: auto;
+  overflow: auto;
   transition: all 0.4s ease;
 }
 
