@@ -167,7 +167,7 @@ export default function UserDashboard() {
               series={chartSeries}
               type="donut"
               width="100%"
-              height={270}
+              height={250}
             />
           </div>
         </div>

@@ -1,20 +1,31 @@
-/* Color Palette Settings */
+/* ========================================================
+   GLOBAL CONTAINER & GENERAL STYLES
+   ======================================================== */
 .saas-dashboard {
   background-color: #f6f8fb;
-  /* padding: 30px; */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   color: #1e293b;
-  /* min-height: 100vh; */
-  padding-top:24px;
   box-sizing: border-box;
   overflow: hidden;
+  /* padding: 24px 16px; */
+  width: 100%;
 }
 
 .saas-dashboard * {
   box-sizing: border-box;
 }
 
-/* Header Area */
+@media (min-width: 768px) {
+  /* .saas-dashboard {
+    padding: 30px;
+  } */
+}
+
+/* ========================================================
+   HEADER AREA
+   ======================================================== */
 .dashboard-header {
   margin-bottom: 28px;
 }
@@ -36,18 +47,34 @@
   font-weight: 500;
 }
 
-/* 4 Column Top Grid Layout */
+/* ========================================================
+   4 COLUMN TOP METRICS GRID 
+   ======================================================== */
 .metrics-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   margin-bottom: 24px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .metrics-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
 }
 
 .metric-card {
   background-color: #ffffff;
-  /* border-radius: 6px; */
   border: 1px solid #edf2f7;
+  /* border-radius: 6px; */
   padding: 24px 24px 0 24px;
   display: flex;
   flex-direction: column;
@@ -55,6 +82,7 @@
   position: relative;
   overflow: hidden;
   height: 175px;
+  width: 100%;
 }
 
 .card-info-wrap {
@@ -79,7 +107,7 @@
   letter-spacing: -0.5px;
 }
 
-/* Small Indicator Badges */
+/* Indicator Badges */
 .pill {
   font-size: 11px;
   font-weight: 600;
@@ -108,12 +136,25 @@
   justify-content: center;
   font-size: 16px;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
-.icon-blue { background-color: #eff6ff; color: #3b82f6; }
-.icon-teal { background-color: #e6fffa; color: #0d9488; }
-.icon-red { background-color: #fef2f2; color: #f87171; }
-.icon-orange { background-color: #fff7ed; color: #f97316; }
+.icon-blue {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+.icon-teal {
+  background-color: #e6fffa;
+  color: #0d9488;
+}
+.icon-red {
+  background-color: #fef2f2;
+  color: #f87171;
+}
+.icon-orange {
+  background-color: #fff7ed;
+  color: #f97316;
+}
 
 /* Micro Sparkline Placement */
 .sparkline-container {
@@ -123,51 +164,179 @@
   margin-bottom: -2px;
 }
 
-/* Main Workspace Grid Split */
+/* ========================================================
+   MAIN VISUALIZATION WORKSPACE ROW SPLIT
+   ======================================================== */
 .visualization-row {
   display: grid;
-  grid-template-columns: 2.1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
+  /* margin-bottom: 24px; */
+  width: 100%;
+}
 
+@media (min-width: 1200px) {
+  .visualization-row {
+    grid-template-columns: 2.1fr 1fr;
+  }
 }
 
 .viz-card {
   background-color: #ffffff;
-  /* border-radius: 6px; */
   border: 1px solid #edf2f7;
+  /* border-radius: 6px; */
   padding: 24px;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;/* Layout containers styling */
-.saas-dashboard-p2 {
-  background-color: #f6f8fb;
-  padding: 0 30px 30px 30px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  overflow: hidden;
+  width: 100%;
+}
+
+.viz-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.viz-card-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
   color: #1e293b;
+}
+
+/* Header Filters Toggles */
+.filter-toggle-group {
+  display: flex;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  padding: 5px 12px;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Precise Chart Elements Custom Legends */
+.custom-chart-legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.donut-custom-legend {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-blue {
+  background-color: #3b82f6;
+}
+.dot-green {
+  background-color: #10b981;
+}
+.dot-orange {
+  background-color: #d97706;
+}
+.dot-gray {
+  background-color: #cbd5e1;
+}
+
+/* Chart Container Canvas Box Sizes */
+.growth-chart-wrapper {
+  height: 330px;
+  width: 100%;
+}
+
+.donut-chart-wrapper {
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ========================================================
+   SAAS DASHBOARD SECONDARY CONTENT BLOCKS (PART 2 FLATTENED)
+   ======================================================== */
+.saas-dashboard-p2 {
+  background-color: transparent;
+  width: 100%;
   box-sizing: border-box;
 }
 
-.saas-dashboard-p2 * {
-  box-sizing: border-box;
-}
-
-/* Three widgets row distribution split */
+/* Three Widgets Row Distribution Grid */
 .widgets-row {
   display: grid;
-  grid-template-columns: 1.2fr 1.3fr 1.1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 24px;
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .widgets-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .widgets-row {
+    grid-template-columns: 1.2fr 1.3fr 1.1fr;
+  }
 }
 
 .widget-card {
   background-color: #ffffff;
   border: 1px solid #edf2f7;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   padding: 24px;
-  height: 380px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .widget-title {
@@ -177,7 +346,7 @@
   margin: 0 0 20px 0;
 }
 
-/* Funnel Segment styles */
+/* Funnel Segment Progress Component Styles */
 .funnel-container {
   display: flex;
   flex-direction: column;
@@ -217,18 +386,26 @@
   border-radius: 4px;
 }
 
-.bar-gray { background-color: #cbd5e1; }
-.bar-blue { background-color: #3b82f6; }
-.bar-orange { background-color: #f59e0b; }
-.bar-green { background-color: #10b981; }
+.bar-gray {
+  background-color: #cbd5e1;
+}
+.bar-blue {
+  background-color: #3b82f6;
+}
+.bar-orange {
+  background-color: #f59e0b;
+}
+.bar-green {
+  background-color: #10b981;
+}
 
-/* Growth Chart Layout wrap */
 .growth-chart-container {
   flex-grow: 1;
   height: 100%;
+  width: 100%;
 }
 
-/* Metrics List Side Menu Widget */
+/* Side Metric List List-Items Menu Block */
 .metrics-list {
   display: flex;
   flex-direction: column;
@@ -271,12 +448,15 @@
   border-radius: 4px;
 }
 
-/* Data Table Grid Components */
+/* ========================================================
+   DATA TRANSACTION RESPONSIVE TABLES
+   ======================================================== */
 .transactions-card {
   background-color: #ffffff;
   border: 1px solid #edf2f7;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   padding: 24px;
+  width: 100%;
 }
 
 .table-title {
@@ -284,7 +464,9 @@
 }
 
 .table-wrapper {
+  width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .transactions-table {
@@ -299,6 +481,7 @@
   color: #94a3b8;
   padding: 12px 16px;
   border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
 }
 
 .transactions-table td {
@@ -306,6 +489,7 @@
   border-bottom: 1px solid #f1f5f9;
   font-size: 13px;
   vertical-align: middle;
+  white-space: nowrap; /* Keeps rows formatted evenly during inner scrolling */
 }
 
 .transactions-table tr:last-child td {
@@ -328,6 +512,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .customer-info {
@@ -349,7 +534,7 @@
   color: #64748b;
 }
 
-/* Color Labels badges for transaction states */
+/* Status Badges */
 .status-badge {
   font-size: 11px;
   font-weight: 600;
@@ -358,136 +543,47 @@
   display: inline-block;
 }
 
-.badge-active { background-color: #e6f7ed; color: #10b981; }
-.badge-trial { background-color: #eff6ff; color: #3b82f6; }
-.badge-churned { background-color: #fef2f2; color: #ef4444; }
+.badge-active {
+  background-color: #e6f7ed;
+  color: #10b981;
+}
+.badge-trial {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+.badge-churned {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
 
 .impact-cell {
   font-weight: 600;
 }
 
-.positive-text { color: #10b981; }
-.negative-text { color: #ef4444; }
-
-/* Responsive adjustments for mid-sized / smaller screens */
-@media (max-width: 1100px) {
-  .widgets-row {
-    grid-template-columns: 1fr;
-  }
-  .widget-card {
-    height: auto;
-  }
+.positive-text {
+  color: #10b981;
 }
-}
-
-.viz-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.viz-card-header h3 {
-  font-size: 15px;
-  font-weight: 600;
-  margin: 0;
-  color: #1e293b;
-}
-
-/* Header Filters Toggles */
-.filter-toggle-group {
-  display: flex;
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  padding: 2px;
-}
-
-.toggle-btn {
-  background: transparent;
-  border: none;
-  font-size: 12px;
-  padding: 5px 12px;
-  color: #94a3b8;
-  cursor: pointer;
-  font-weight: 500;
-  border-radius: 3px;
-}
-
-.toggle-btn.active {
-  background-color: #3b82f6;
-  color: #ffffff;
-}
-
-/* Precise Custom Graph Legends */
-.custom-chart-legend {
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-  font-size: 12px;
-  color: #64748b;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.donut-custom-legend {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  font-size: 12px;
-  color: #64748b;
-  font-weight: 500;
-  margin-top: 15px;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot-blue { background-color: #3b82f6; }
-.dot-green { background-color: #10b981; }
-.dot-orange { background-color: #d97706; }
-.dot-gray { background-color: #cbd5e1; }
-
-/* Chart Container Sizing */
-.growth-chart-wrapper {
-  height: 330px;
-  width: 100%;
-}
-
-.donut-chart-wrapper {
-  height: 290px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.negative-text {
+  color: #ef4444;
 }
 
 /* ========================================================
-   Responsive Media Queries for Universal Screen Balancing
+   EXTRA COMFORT SMALL SMARTPHONE OPTIMIZATIONS (480px)
    ======================================================== */
-@media (max-width: 1200px) {
-  .metrics-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .visualization-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  .metrics-row {
-    grid-template-columns: 1fr;
-  }
-  .saas-dashboard {
+@media (max-width: 480px) {
+  .metric-card,
+  .viz-card,
+  .widget-card,
+  .transactions-card {
     padding: 16px;
+  }
+
+  .card-value {
+    font-size: 20px;
+  }
+
+  .sparkline-container {
+    margin-left: -17px;
+    margin-right: -17px;
   }
 }

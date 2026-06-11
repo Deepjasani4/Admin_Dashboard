@@ -142,15 +142,7 @@ export default function CRMWidgets() {
           </div>
         </div>
 
-      </div>
-
-      {/* ==========================================================================
-         BLOCK 2: Bottom Widgets Row (Leaderboard, Total Leads, Markets)
-         ========================================================================== */}
-      <div className="widgets-row-grid three-columns" style={{ marginTop: '24px' }}>
-        
-        {/* Card 4: Leaderboard */}
-        <div className="crm-card">
+         <div className="crm-card">
           <h3>Leaderboard</h3>
           <div className="leaderboard-list">
             {[
@@ -237,9 +229,7 @@ export default function CRMWidgets() {
             ))}
           </div>
         </div>
-
       </div>
-
     </div>
   );
 }

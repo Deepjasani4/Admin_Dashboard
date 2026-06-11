@@ -45,7 +45,7 @@
 .metric-mini-card {
   background-color: #ffffff;
   border: 1px solid #edf2f7;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   padding: 24px 24px 0 24px;
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@
 .visual-chart-box {
   background-color: #ffffff;
   border: 1px solid #edf2f7;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -245,7 +245,7 @@
   .metrics-grid-row {
     grid-template-columns: 1fr;
   }
-  .marketing-dashboard {
+  /* .marketing-dashboard {
     padding: 16px;
-  }
+  } */
 }

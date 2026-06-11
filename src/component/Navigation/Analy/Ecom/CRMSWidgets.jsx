@@ -121,7 +121,6 @@ export default function CRMSWidgets() {
          ========================================================================== */}
       <div
         className="widgets-row-grid split-table-layout"
-        style={{ marginTop: "24px" }}
       >
         {/* Left Side: Solid Blue Products Sold Panel */}
         <div className="products-sold-hero-card">

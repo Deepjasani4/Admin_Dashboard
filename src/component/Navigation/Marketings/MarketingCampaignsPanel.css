@@ -2,12 +2,14 @@
    Base Structure Context Reset
    ========================================================================== */
 .marketing-metrics-panel {
-  background-color: #ffffff;
   padding-top: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   color: #1e293b;
   /* min-height: 100vh; */
   box-sizing: border-box;
+  /* overflow: hidden; */
 }
 
 .marketing-metrics-panel * {
@@ -33,6 +35,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
 }
 
 .panel-box-title {
@@ -95,9 +98,18 @@
   text-align: center;
 }
 
-.tag-gray { background-color: #f1f5f9; color: #64748b; }
-.tag-green { background-color: #ecfdf5; color: #10b981; }
-.tag-red { background-color: #fef2f2; color: #ef4444; }
+.tag-gray {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+.tag-green {
+  background-color: #ecfdf5;
+  color: #10b981;
+}
+.tag-red {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
 
 /* List Setup for Landing Pages Card */
 .landing-urls-list {
@@ -174,8 +186,12 @@
   display: inline-block;
 }
 
-.node-dot.dot-blue { background-color: #3b82f6; }
-.node-dot.dot-teal { background-color: #10b981; }
+.node-dot.dot-blue {
+  background-color: #3b82f6;
+}
+.node-dot.dot-teal {
+  background-color: #10b981;
+}
 
 .apexchart-radar-wrapper {
   height: 220px;
@@ -209,7 +225,8 @@
   gap: 16px;
 }
 
-.toolbar-left-side, .toolbar-right-side {
+.toolbar-left-side,
+.toolbar-right-side {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -278,7 +295,8 @@
   transition: background-color 0.15s ease;
 }
 
-.toolbar-square-action-btn:hover, .toolbar-pill-filter-btn:hover {
+.toolbar-square-action-btn:hover,
+.toolbar-pill-filter-btn:hover {
   background-color: #f8fafc;
 }
 
@@ -349,8 +367,14 @@
   display: inline-block;
 }
 
-.pill-status-badge.badge-state-active { background-color: #d1fae5; color: #065f46; }
-.pill-status-badge.badge-state-paused { background-color: #f1f5f9; color: #475569; }
+.pill-status-badge.badge-state-active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.pill-status-badge.badge-state-paused {
+  background-color: #f1f5f9;
+  color: #475569;
+}
 
 /* ==========================================================================
    Table Pagination Bottom Controls Footnote Row
@@ -361,6 +385,7 @@
   align-items: center;
   font-size: 13px;
   color: #64748b;
+  overflow: hidden;
 }
 
 .pagination-right-navigation-cluster {
@@ -445,7 +470,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .metric-panel-box {
     min-height: auto;
   }
@@ -463,7 +488,8 @@
     align-items: flex-start;
   }
 
-  .search-field-positioning-box, .input-filter-search {
+  .search-field-positioning-box,
+  .input-filter-search {
     width: 100%;
   }
 

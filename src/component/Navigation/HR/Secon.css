@@ -27,6 +27,7 @@
   height: 340px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .card-widget-title {
@@ -294,6 +295,7 @@
   align-items: center;
   font-size: 13px;
   color: #94a3b8;
+  overflow: hidden;
 }
 
 .pagination-controls {

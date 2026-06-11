@@ -57,7 +57,7 @@
    ========================================================================== */
 .metrics-panel-card {
   background-color: #ffffff;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 1px 2px rgba(0, 0, 0, 0.03);
   padding: 24px;
   box-sizing: border-box;
@@ -359,7 +359,7 @@
    ========================================================================== */
 @media (max-width: 640px) {
   .project-dashboard-wrapper {
-    padding: 16px;
+    /* padding: 16px; */
   }
 
   .metrics-panel-card {

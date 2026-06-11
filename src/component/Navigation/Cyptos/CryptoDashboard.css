@@ -256,7 +256,7 @@
    ========================================================================== */
 @media (max-width: 425px) {
   .crypto-dashboard-canvas {
-    padding: 16px;
+    /* padding: 16px; */
   }
 
   .wallet-balance {
